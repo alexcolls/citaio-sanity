@@ -66,7 +66,7 @@ const Header = () => {
                 whileInView={scaleVariants.whileInView}
                 className="app__header-circles"
             >
-                {[img2, img, img3, images.flutter, images.sass].map((circle, index) => (
+                {[img2, img, img3].map((circle, index) => (
                     <div className="circle-cmp app__flex" key={`circle-${index}`}>
                         <img src={circle} alt="profile_bg" />
                     </div>
@@ -76,4 +76,4 @@ const Header = () => {
     );
 }
 
-export default AppWrap(Header, 'home');
+export default AppWrap(Header, 'portada');

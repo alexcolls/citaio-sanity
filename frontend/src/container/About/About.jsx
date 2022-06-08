@@ -19,7 +19,7 @@ const About = () => {
 
   return (
     <>
-      <h2 className="head-text">I Know that <span>Good Design</span> <br />means  <span>Good Business</span></h2>
+      <h2 className="head-text">Nuestras <span>Tarifas</span></h2>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (
@@ -42,6 +42,6 @@ const About = () => {
 
 export default AppWrap(
   MotionWrap(About, 'app__about'),
-  'about',
+  'tarifas',
   'app__whitebg',
 );

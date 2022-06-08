@@ -2,17 +2,12 @@ import React, { useState } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
-import { useTranslation } from 'react-i18next';
 import './Navbar.scss';
 
-const menuList = ['home', 'about', 'work', 'skills', 'testimonial', 'contact']
-
-
+const menuList = ['portada', 'historia', 'producto', 'tarifas', 'testimonios', 'contacto']
 
 const Navbar = (props) => {
   const [toggle, setToggle] = useState(false);
-
-  const [t, i18n] = useTranslation("globals");
 
   return (
     <nav className="app__navbar">
@@ -27,12 +22,6 @@ const Navbar = (props) => {
           </li>
         ))}
       </ul>
-
-      <select className="custom-select" onChange={(event) => i18n.changeLanguage(event.target.value)}>
-        <option value="es">Español</option>
-        <option value="ca">Català</option>
-        <option value="en">English</option>
-      </select>
 
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
