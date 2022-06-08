@@ -37,31 +37,36 @@ const Footer = () => {
 
     return (
         <>
-            <h2 className="head-text">Contactanos para solicitar una demo</h2>
+            <h2 className="head-text">Contáctanos para solicitar una demo</h2>
 
             {!isFormSubmitted ? (
                 <div className="app__footer-form app__flex">
                     <div className="app__flex">
-                        <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
+                        <input className="p-text" type="text" placeholder="Tu nombre" name="username" value={username} onChange={handleChangeInput} />
                     </div>
                     <div className="app__flex">
-                        <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+                        <input className="p-text" type="email" placeholder="Tu email" name="email" value={email} onChange={handleChangeInput} />
+                    </div>
+                    <div className="app__flex">
+                        <input className="p-text" type="email" placeholder="Tu telefono" name="telefono" value={email} onChange={handleChangeInput} />
                     </div>
                     <div>
                         <textarea
                             className="p-text"
-                            placeholder="Your Message"
+                            placeholder="Tu mensaje"
                             value={message}
                             name="message"
                             onChange={handleChangeInput}
                         />
                     </div>
+                    <input name="cbipeliculas" type="checkbox" />
+                    He leído y acepto la información básica de <a href=''>política de privacitat </a>
                     <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
                 </div>
             ) : (
                 <div>
                     <h3 className="head-text">
-                        Thank you for getting in touch!
+                        Gracias! Nos pondremos en contacto contigo en la mayor brevedad posible.
                     </h3>
                 </div>
             )}
