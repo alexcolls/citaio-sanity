@@ -48,7 +48,7 @@ const Footer = () => {
                         <input className="p-text" type="email" placeholder="Tu email" name="email" value={email} onChange={handleChangeInput} />
                     </div>
                     <div className="app__flex">
-                        <input className="p-text" type="email" placeholder="Tu telefono" name="telefono" value={email} onChange={handleChangeInput} />
+                        <input className="p-text" type="email" placeholder="Tu telefono" name="teléfono" value={email} onChange={handleChangeInput} />
                     </div>
                     <div>
                         <textarea
@@ -59,8 +59,10 @@ const Footer = () => {
                             onChange={handleChangeInput}
                         />
                     </div>
-                    <input name="cbipeliculas" type="checkbox" />
-                    He leído y acepto la información básica de <a href=''>política de privacitat </a>
+                    <div className="app__footer-checkbox" >
+                        <input type="checkbox" id="privacy" />
+                        <label for="privacy">He leído y acepto la información básica de <a href=''>política de privacitat </a></label>
+                    </div>
                     <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
                 </div>
             ) : (

@@ -34,9 +34,7 @@ const Skills = () => {
                         whileInView={{ opacity: [0, 1] }}
                         transition={{ duration: 0.5 }}
                         className="app__skills-item app__flex"
-
                     >
-
                         CITA.iO fue creada por profesionales sanitarios y expertos tecnológicos. Durante 2 años diseñaron y testaron el software para satisfacer las necesidades reales de profesionales y pacientes. Hoy en día sigue creciendo y añadiendo nuevas funcionalidades.
                     </motion.div>
 

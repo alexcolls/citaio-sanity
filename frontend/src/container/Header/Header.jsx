@@ -8,8 +8,6 @@ import img2 from './assets/schedule.png';
 import img3 from './assets/video-camera.png';
 import './Header.scss';
 
-import { useTranslation } from 'react-i18next'
-
 const scaleVariants = {
     whileInView: {
         scale: [0, 1],
@@ -22,7 +20,6 @@ const scaleVariants = {
 };
 
 const Header = () => {
-    const [t] = useTranslation("global");
 
     return (
         <div className="app__header app__flex">
@@ -35,13 +32,13 @@ const Header = () => {
                     <div className="badge-cmp app__flex">
                         <span>👋</span>
                         <div style={{ marginLeft: 20 }}>
-                            <p className="p-text">{t("header.welcome")}</p>
+                            <p className="p-text">Bienvenido a</p>
                             <h1 className="head-text">CITAio</h1>
                         </div>
                     </div>
 
                     <div className="tag-cmp app__flex">
-                        <p className="p-text">{t("header.title")}</p>
+                        <p className="p-text">El programa para gestionar íntegramente tu consulta y realizar videoconferencias  100% seguras. Cumplimos los más altos estándares de seguridad. <br /><br /> CITA.iO no requiere instalación, es personalizable y accesible desde cualquier dispositivo. Configurable en pocos minutos.</p>
                     </div>
                 </div>
             </motion.div>
