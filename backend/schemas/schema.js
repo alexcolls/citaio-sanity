@@ -13,6 +13,7 @@ import experiences from './experiences'
 import skills from './skills'
 import workExperience from './workExperience'
 import contact from './contact'
+import prices from './prices'
 
 
 const langSchema = {
@@ -46,7 +47,7 @@ export default createSchema({
   name: 'default',
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([langSchema, header, abouts, works, testimonials, brands, skills, workExperience, experiences, contact
+  types: schemaTypes.concat([langSchema, header, abouts, works, testimonials, brands, skills, prices, workExperience, experiences, contact
     /* Your types here! */
   ]),
 })

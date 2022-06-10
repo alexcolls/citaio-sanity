@@ -1,7 +1,7 @@
 import React from 'react';
 import CookieConsent from 'react-cookie-consent';
 
-import { About, Footer, Header, Skills, Testimonial, Work } from './container';
+import { Prices, Footer, Header, Skills, Testimonial, Work } from './container';
 import { Navbar } from './components';
 import './App.scss';
 
@@ -12,7 +12,7 @@ const App = () => {
       <Header />
       <Skills />
       <Work />
-      <About />
+      <Prices />
       <Testimonial />
       <Footer />
 

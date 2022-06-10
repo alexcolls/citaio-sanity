@@ -63,7 +63,7 @@ const Footer = () => {
                         <input type="checkbox" id="privacy" />
                         <label for="privacy">He leído y acepto la información básica de <a href=''>política de privacitat </a></label>
                     </div>
-                    <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
+                    <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Enviar' : 'Enviando...'}</button>
                 </div>
             ) : (
                 <div>
