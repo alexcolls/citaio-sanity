@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import './Navbar.scss';
 
-const menuList = ['portada', 'historia', 'producto', 'tarifas', 'testimonios', 'contacto']
+const menuList = ['portada', 'historia', 'producto', 'testimonios', 'tarifas', 'contacto']
 
 const Navbar = (props) => {
   const [toggle, setToggle] = useState(false);
@@ -42,9 +42,14 @@ const Navbar = (props) => {
                   </a>
                 </li>
               ))}
+
             </ul>
+
           </motion.div>
+
+
         )}
+
       </div>
     </nav>
   );

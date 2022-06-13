@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-
-import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
 import './Footer.scss';
@@ -40,7 +38,7 @@ const Footer = () => {
             <h2 className="head-text">Contáctanos para solicitar una demo</h2>
 
             {!isFormSubmitted ? (
-                <div className="app__footer-form app__flex">
+                <form className="app__footer-form app__flex">
                     <div className="app__flex">
                         <input className="p-text" type="text" placeholder="Tu nombre" name="username" value={username} onChange={handleChangeInput} />
                     </div>
@@ -64,7 +62,7 @@ const Footer = () => {
                         <label for="privacy">He leído y acepto la información básica de <a href=''>política de privacitat </a></label>
                     </div>
                     <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Enviar' : 'Enviando...'}</button>
-                </div>
+                </form>
             ) : (
                 <div>
                     <h3 className="head-text">

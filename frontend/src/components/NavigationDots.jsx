@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-const menuList = ['portada', 'historia', 'producto', 'tarifas', 'testimonios', 'contacto']
+const menuList = ['portada', 'historia', 'producto', 'testimonios', 'tarifas', 'contacto']
 
 const NavigationDots = ({ active }) => (
   <div className="app__navigation">

@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
-import './Work.scss';
+import './Product.scss';
 
-const Work = () => {
+const Products = () => {
     const [works, setWorks] = useState([]);
     const [filterWork, setFilterWork] = useState([]);
-    const [activeFilter, setActiveFilter] = useState('None');
+    const [activeFilter, setActiveFilter] = useState('Organización');
     const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
     useEffect(() => {
@@ -35,12 +35,19 @@ const Work = () => {
         }, 500);
     };
 
+    useEffect(() => {
+        let ignore = false;
+
+        if (!ignore) setFilterWork(works.filter((work) => work.tags.includes('Organización')));
+        return () => { ignore = true; }
+    }, [works]);
 
     const filterList = ['Organización', 'Comunicación', 'Facturación'];
 
     return (
         <>
-            <h2 className="head-text">Que te ofrece <span>CITAio</span> </h2>
+            <h2 className="head-text">Que te ofrece <span>CITAio</span>
+            </h2>
 
             <div className="app__work-filter">
                 {filterList.map((item, index) => (
@@ -91,7 +98,7 @@ const Work = () => {
 };
 
 export default AppWrap(
-    MotionWrap(Work, 'app__works'),
+    MotionWrap(Products, 'app__works'),
     'producto',
     'app__primarybg',
 );

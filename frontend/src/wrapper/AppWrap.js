@@ -10,7 +10,7 @@ const AppWrap = (Component, idName, classNames) => function HOC() {
 
                 <div className="copyright">
                     <p className="p-text"></p>
-                    <p className="p-text"></p>
+                    <p className="p-text">CITAIO 2022 © ALL RIGHTS RESERVED.</p>
                 </div>
             </div>
             <NavigationDots active={idName} />

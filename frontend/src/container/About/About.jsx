@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import ReactTooltip from 'react-tooltip';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
-import { urlFor, client } from '../../client';
-import './Skills.scss';
+import { client } from '../../client';
+import './About.scss';
 
-const Skills = () => {
+const Abouts = () => {
     const [experiences, setExperiences] = useState([]);
     const [skills, setSkills] = useState([]);
 
@@ -82,7 +82,7 @@ const Skills = () => {
 };
 
 export default AppWrap(
-    MotionWrap(Skills, 'app__skills'),
+    MotionWrap(Abouts, 'app__skills'),
     'historia',
     'app__whitebg',
 );

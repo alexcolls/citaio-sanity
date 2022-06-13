@@ -5,6 +5,8 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import './Prices.scss';
 import { urlFor, client } from '../../client';
 
+import { FaCheck } from 'react-icons/fa';
+
 
 const About = () => {
   const [prices, setPrices] = useState([]);
@@ -19,8 +21,7 @@ const About = () => {
 
   return (
     <>
-      <h2 className="head-text">Nuestras <span>Tarifas</span></h2>
-
+      <h2 className="head-text">Nuestras <span>tarifas</span></h2>
       <div className="app__prices">
         {prices.map((price, index) => (
           <motion.div
@@ -39,7 +40,8 @@ const About = () => {
             <div className="option">
               <ul>
                 {price.feature.map((fet) => (
-                  <li> <i className="fa fa-check" aria-hidden="true"></i> {fet} </li>
+
+                  <li><FaCheck /> {fet} </li>
                 ))}
               </ul>
             </div>
@@ -54,5 +56,5 @@ const About = () => {
 export default AppWrap(
   MotionWrap(About, 'app__about'),
   'tarifas',
-  'app__whitebg',
+  'app__primarybg',
 );
